@@ -1,0 +1,76 @@
+{
+  "status": "PACKAGE_VERIFIED",
+  "scope": "portable source, static webpage and finished reference films",
+  "included": [
+    "relative Python geometry/deformation/render/reveal scripts",
+    "geometry source and sanitized metadata",
+    "Unreal 5.7 uproject and Config only",
+    "pinned requirements",
+    "NOTICE and sanitized proof summaries",
+    "self-contained web page, poster and finished MP4 reference films"
+  ],
+  "excluded": [
+    "Unreal Content/uassets/maps/materials",
+    "engine binaries and installation paths",
+    "DerivedDataCache, Intermediate and Saved state",
+    "raw console logs and private machine paths",
+    "generated OBJ/FBX/blend/HDR files",
+    "full-resolution PNG render sequence"
+  ],
+  "source_adaptation": {
+    "canonical_source_preserved": true,
+    "package_root_resolution": "Path(__file__).resolve().parents[1]",
+    "runtime_receipts": "proof/ rather than canonical workspace logs/",
+    "default_math_control": "112^3 gyroid_lattice_300cm source, generated before scripts/verify_math.py"
+  },
+  "fresh_venv_checks": {
+    "requirements": {
+      "numpy": "2.0.2",
+      "scipy": "1.13.1",
+      "scikit-image": "0.24.0",
+      "Pillow": "11.3.0"
+    },
+    "original_112_generation": "PASS",
+    "original_112_obj_byte_identity_to_canonical": true,
+    "original_112_obj_sha256": "af9edb5ed106c3d62268f47d59b135707b54fb92b84b885777839a665833f878",
+    "fine_192_generation": "PASS",
+    "fine_192_obj_byte_identity_to_canonical": true,
+    "fine_192_obj_sha256": "decab021c79adc1154a04bfd4374cebaa4b1bee273492c13aaf2e75bef7059e7",
+    "math_check": "PASS",
+    "math_check_summary": "proof/MATH_CHECK_SUMMARY.json",
+    "python_syntax_check": "PASS"
+  },
+  "unreal_smoke_check": {
+    "engine_major_minor": "5.7",
+    "project_build": "PASS: GyroidFine import, map/material/sequence creation, BUILD.json",
+    "render_request": "320x180, frames [0,2), one spatial sample, one temporal sample",
+    "two_frame_render": "PASS: RENDER_RESULT success=true and two PNG frames",
+    "sequence_readback": "PASS: frames 0, 30, 60, 90, 119",
+    "editor_shutdown": "not claimed; local command may return nonzero after successful receipt/export",
+    "raw_engine_logs_in_package": false
+  },
+  "config_hardening": {
+    "android_file_server": "explicitly disabled in Lattice.uproject",
+    "security_tokens_in_package_config": false
+  },
+  "geometry_limits": {
+    "fine_triangles": 656980,
+    "fine_boundary_edges": 0,
+    "fine_nonmanifold_edges": 0,
+    "fine_degenerate_triangles": 0,
+    "fine_signed_volume_cm3": 1463506.593398614,
+    "fbx_roundtrip_not_repeated_in_fresh_venv": "Blender remains an external tool; canonical Blender 5.1.2 round-trip is recorded in geometry/gyroid_lattice_fine_audit.json"
+  },
+  "media_limits": {
+    "proven_local_media_summary": "proof/MEDIA_SUMMARY.json",
+    "proven_local_temporal_samples": 16,
+    "portable_example_temporal_samples": 16,
+    "media_in_package": true,
+    "post_export_editor_abort": "recorded after successful export; clean editor shutdown is not claimed",
+    "cross_device_pixel_identity": "not claimed",
+    "physical_metal_or_photorealism": "not claimed",
+    "media_directory": "web/"
+  },
+  "repository": "https://github.com/AdemVessell/aureole",
+  "website": "https://www.xn--arkh-eva.org/aureole/"
+}

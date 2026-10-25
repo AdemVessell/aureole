@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08090b">
+    <title>AUREOLE — equation cinema</title>
+    <meta name="description" content="A transforming metallic lattice defined by compact equations, rendered in Unreal Engine 5.7. Watch the film, reveal the mathematics and reproduce the shot.">
+    <link rel="canonical" href="https://www.xn--arkh-eva.org/aureole/">
+    <meta property="og:title" content="AUREOLE — equation cinema">
+    <meta property="og:description" content="Five seconds of metal shaped by equations. Film, mathematics and reproducible Unreal source.">
+    <meta property="og:image" content="https://www.xn--arkh-eva.org/aureole/poster.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body data-asset-root="./">
+    <main class="shell">
+      <header class="masthead">
+        <a class="wordmark" href="./" aria-label="Aureole home">AUREOLE</a>
+        <p class="kicker">equation cinema <span aria-hidden="true">/</span> lattice study</p>
+        <nav class="serial site-nav" aria-label="More from Arkhē"><a href="https://www.xn--arkh-eva.org/work/">Arkhē</a><a href="https://www.xn--arkh-eva.org/tidelight/">TIDELIGHT</a><a href="https://www.xn--arkh-eva.org/nacre/">NACRE</a><a href="https://github.com/AdemVessell/aureole">GitHub ↗</a></nav>
+      </header>
+
+      <section class="intro" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">A short study in metallic continuity</p>
+          <h1 id="page-title">AUREOLE</h1>
+        </div>
+        <p class="intro-note">Five seconds of metal shaped by equations.</p>
+      </section>
+
+      <section class="screen" aria-label="Film player">
+        <div class="screen-frame">
+          <video id="film" class="film" playsinline muted preload="none" poster="poster.jpg">
+            Your browser does not support inline video.
+          </video>
+          <img id="film-cover" src="poster.jpg" alt="The metallic gyroid lattice" decoding="async">
+          <div id="video-status" class="video-status" role="status" aria-live="polite">
+            <span class="status-mark" aria-hidden="true"></span>
+            <span>Press Play to load the film</span>
+          </div>
+          <button id="play-overlay" class="play-overlay" type="button" aria-label="Play film">
+            <span class="play-glyph" aria-hidden="true"></span>
+            <span>Play film</span>
+          </button>
+        </div>
+        <div class="transport" aria-label="Playback controls">
+          <button id="play-film" type="button">Play</button>
+          <button id="replay-film" type="button">Replay</button>
+          <input id="film-time" aria-label="Film time in seconds" type="range" min="0" max="5" step="0.001" value="0" disabled>
+          <output id="film-clock" for="film-time">0.0 / 5.0 s</output>
+          <button id="fullscreen-film" type="button">Full screen</button>
+        </div>
+        <div class="screen-caption">
+          <div class="mode-switch" role="group" aria-label="Film mode">
+            <button class="mode-button is-active" type="button" data-mode="film" aria-pressed="true">Film</button>
+            <button class="mode-button" type="button" data-mode="math" aria-pressed="false">Math reveal</button>
+          </div>
+          <p class="screen-hint"><kbd>Space</kbd> play <span aria-hidden="true">·</span> <kbd>R</kbd> replay <span aria-hidden="true">·</span> <kbd>1</kbd>/<kbd>2</kbd> switch</p>
+          <p id="mode-label" class="mode-label">clean pass <span aria-hidden="true">·</span> muted</p>
+        </div>
+      </section>
+
+      <section class="review-grid" aria-label="Equations and rendering">
+        <div class="review-column review-column--wide">
+          <div class="section-heading">
+            <p class="eyebrow">Reading the object</p>
+            <p id="manifest-state" class="manifest-state">Manifest pending</p>
+          </div>
+          <div id="equation-list" class="equation-list" aria-live="polite">
+            <article class="equation-card equation-card--pending">
+              <p class="card-index">00 <span>manifest</span></p>
+              <h2>Equations load with render receipt</h2>
+              <p>Mathematical notation will appear here when <code>SHOT.json</code> is present beside the film assets.</p>
+            </article>
+          </div>
+        </div>
+
+        <aside class="review-column review-column--side">
+          <div class="spec-block">
+            <p class="eyebrow">Object data</p>
+            <dl class="spec-list">
+              <div><dt>Duration</dt><dd id="duration-value">05.0 s</dd></div>
+              <div><dt>Frame rate</dt><dd id="fps-value">24 fps</dd></div>
+              <div><dt>Raster</dt><dd id="raster-value">1600 × 900</dd></div>
+              <div><dt>Engine</dt><dd>Unreal 5.7</dd></div>
+            </dl>
+          </div>
+          <div class="claim-block">
+            <p class="eyebrow">How it is made</p>
+            <p id="claim-value">The render receipt is the source for equations and claims. This review does not infer a novel engine from a finished image.</p>
+          </div>
+        </aside>
+      </section>
+
+      <footer class="footer">
+        <p>Python + Unreal 5.7 + Codex</p>
+        <p>Mathematical authoring <span aria-hidden="true">≠</span> engine optics</p>
+        <p id="receipt-state">Loading verification summary</p>
+      </footer>
+      <nav class="downloads" aria-label="Source and films">
+        <a href="clean.mp4" download>Download film</a> ·
+        <a href="reveal.mp4" download>Download math reveal</a> ·
+        <a href="https://github.com/AdemVessell/aureole#readme">Reproduce the shot</a> ·
+        <a href="https://github.com/AdemVessell/aureole/blob/main/scripts/build_scene.py">Scene source</a>
+      </nav>
+      <p class="credit-note">Adem Vessell / Arkhē · created with Codex · <a href="https://github.com/AdemVessell/aureole/blob/main/NOTICE">Credits &amp; notices</a></p>
+      <noscript><p>JavaScript enables this player and equation display. The film downloads and source links above work without it.</p></noscript>
+    </main>
+    <script src="review.js" defer></script>
+  </body>
+</html>

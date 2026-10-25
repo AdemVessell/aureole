@@ -1,0 +1,39 @@
+{
+  "title": "AUREOLE",
+  "duration": 5,
+  "fps": 24,
+  "width": 1600,
+  "height": 900,
+  "reveal_duration": 20,
+  "equations": [
+    {
+      "label": "A surface from three waves",
+      "latex": "g(u,v,w) = sin u cos v + sin v cos w + sin w cos u\nF(x,y,z) = max(|g(kx,ky,kz)| − 0.16, √(x²+y²+z²)/150 − 1) ≤ 0\nk = 1.75 × 2π / 300",
+      "explanation": "This trigonometric approximation to a gyroid forms a connected sheet. The second term trims it to a sphere. Marching cubes samples the field on a 192³ grid; coordinates are centimetres. It is not an exact minimal surface."
+    },
+    {
+      "label": "Twist, breathe, return",
+      "latex": "φ = 2πt/5     κ = 0.62 sin(φ − π/2)     a = 1 + 0.055 sin φ\nθ = κz/150\nx′ = a(x cos θ − y sin θ)\ny′ = a(x sin θ + y cos θ)     z′ = az",
+      "explanation": "Unreal evaluates the displacement in a custom material using the sequence’s ShotTime. A matching inverse-transpose normal transformation keeps the lighting aligned with the moving surface. The camera follows a separate smooth arc."
+    },
+    {
+      "label": "A studio made of functions",
+      "latex": "Lⱼ(u,v) = Pⱼ exp[−(dᵤ/σᵤ)⁴ − ((v−vⱼ)/σᵥ)⁴]\nE(u,v) = b + Σⱼ cⱼ Lⱼ(u,v)",
+      "explanation": "Three soft rectangular panels create the HDR illumination map. Here dᵤ is wrapped horizontal distance to panel j, cⱼ is its colour and Pⱼ its brightness. Four area lights complete the studio lighting."
+    }
+  ],
+  "render_description": "A five-second Unreal Engine 5.7 render at 1600 × 900, with 16 temporal samples per frame. The 20-second walkthrough presents the shot once, then replays it for three equation chapters.",
+  "claim_boundary": "The equations define the geometry, deformation and procedural environment. Unreal supplies the material model, lighting, camera effects and rendering. This is procedural CGI, not a few equations that independently specify every final pixel, and not a physical metal simulation.",
+  "verification": {
+    "status": "Films + math verified",
+    "frames": 120,
+    "engine_shutdown": "The completed export was followed by an editor shutdown abort; documented in the repository proof summaries."
+  },
+  "source": {
+    "geometry": "https://github.com/AdemVessell/aureole/blob/main/geometry/generate_gyroid.py",
+    "scene": "https://github.com/AdemVessell/aureole/blob/main/scripts/build_scene.py",
+    "render": "https://github.com/AdemVessell/aureole/blob/main/scripts/render_shot.py",
+    "math_check": "https://github.com/AdemVessell/aureole/blob/main/proof/MATH_CHECK_SUMMARY.json",
+    "sequence_check": "https://github.com/AdemVessell/aureole/blob/main/proof/SEQUENCE_CHECK_SUMMARY.json"
+  }
+}

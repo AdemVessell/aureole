@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "scope": "local deformation math only",
+  "source_mesh": "gyroid_lattice_300cm.obj generated at 112^3 for the default check",
+  "sample_count": 96,
+  "times_s": [0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0],
+  "finite_all_vertices": true,
+  "max_deformed_radius_cm": 157.85479408972427,
+  "analytic_jacobian_vs_finite_difference_max_abs": 1.7516466055411684e-10,
+  "inverse_transpose_vs_hlsl_max_vector_error": 3.3306690738754696e-16,
+  "corrected_normal_vs_fd_tangent_max_abs_dot": 2.849791513881428e-10,
+  "wrong_no_normal_correction_max_abs_dot": 0.5758125714996625,
+  "wrong_control_must_fail": true,
+  "reproduction": "python3 -B scripts/verify_math.py"
+}

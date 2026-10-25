@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "evaluated_in_unreal": true,
+  "engine": "5.7.0-47537391+++UE5+Release-5.7",
+  "sequence": "5 seconds at 24 fps, 120 frames",
+  "parameter_key_timebase": "sequence ticks; 120000 ticks for the 5-second end key",
+  "samples": [
+    {"frame": 0, "ShotTime": 0.0, "expected_time": 0.0, "camera_error_cm": 2.9869523473280424e-05},
+    {"frame": 30, "ShotTime": 1.25, "expected_time": 1.25, "camera_error_cm": 1.686758741925587e-05},
+    {"frame": 60, "ShotTime": 2.5, "expected_time": 2.5, "camera_error_cm": 1.3009548638365231e-07},
+    {"frame": 90, "ShotTime": 3.75, "expected_time": 3.75, "camera_error_cm": 2.618568350953865e-05},
+    {"frame": 119, "ShotTime": 4.958333492279053, "expected_time": 4.958333333333333, "camera_error_cm": 2.6836104666472238e-05}
+  ],
+  "limits": "sequence-state readback only; not a final pixel or publication claim"
+}

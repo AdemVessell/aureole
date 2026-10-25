@@ -1,0 +1,44 @@
+{
+  "status": "LOCAL_MEDIA_VERIFIED",
+  "recorded_render_settings": {
+    "engine": "Unreal Engine 5.7",
+    "raster": [
+      1600,
+      900
+    ],
+    "fps": 24,
+    "frames": 120,
+    "temporal_samples": 16,
+    "lumen": "software Lumen on Apple silicon M1 Max"
+  },
+  "clean_mp4": {
+    "duration_s": 5.0,
+    "frames": 120,
+    "raster": [
+      1600,
+      900
+    ],
+    "fps": "24/1",
+    "sha256": "2e865e2f07157cdc7041e20de0481146513d38220d7fb3bd8b547ed1c8140ab1",
+    "full_decode": "PASS"
+  },
+  "reveal_mp4": {
+    "duration_s": 20.0,
+    "frames": 480,
+    "raster": [
+      1600,
+      900
+    ],
+    "fps": "24/1",
+    "sha256": "a54f760cc9d50e84cc65074f3d0ca00f4ffafc3cedc8298bb8cabd9cccacca67",
+    "full_decode": "PASS"
+  },
+  "frame_checks": "120 nonblank, distinct, uncropped local frames were verified",
+  "post_export_shutdown": {
+    "status": "POST_EXPORT_EDITOR_ABORT_RECORDED",
+    "impact": "MRQ export and media decode completed; clean editor shutdown is not claimed",
+    "raw_console_log_excluded": true
+  },
+  "limits": "no cross-device pixel bit-identity, photorealism, physical metal simulation, or publication acceptance claim",
+  "reference_media_directory": "web/"
+}

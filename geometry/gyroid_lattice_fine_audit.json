@@ -1,0 +1,53 @@
+{
+  "artifact": "gyroid_lattice_fine",
+  "source": "generate_gyroid.py",
+  "parameters": {
+    "resolution": [192, 192, 192],
+    "radius_cm": 150.0,
+    "periods_across": 1.75,
+    "shell_half_width_g_units": 0.16,
+    "sampling_extent_cm": [-154.0, 154.0]
+  },
+  "mesh": {
+    "vertices": 328572,
+    "triangles": 656980,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "bounds_cm": [[-149.45726013183594, 149.45700073242188], [-149.45726013183594, 149.45700073242188], [-149.45726013183594, 149.45700073242188]],
+    "connected_components": 61,
+    "main_component_triangles": 656500,
+    "small_preserved_components": 60,
+    "small_component_triangles_each": 8
+  },
+  "normals": {
+    "policy": "area-weighted smooth vertex normals",
+    "obj_normals": 328572,
+    "fbx_smooth_polygons": 656980,
+    "analytic_field": "g=sin(u)cos(v)+sin(v)cos(w)+sin(w)cos(u), sphere clip",
+    "source_winding": "marching_cubes gradient_direction=descent",
+    "signed_enclosed_volume_cm3": 1463506.593398614,
+    "signed_volume_is_outward": true,
+    "implicit_field_side_probe": {
+      "epsilon_cm": 0.2,
+      "main_component_outward_faces": 632070,
+      "main_component_inward_faces": 250,
+      "main_component_ambiguous_faces": 24180,
+      "interpretation": "positive signed volume is the global winding decision; near max(sheet,sphere) seams are not treated as a clean per-face orientation oracle"
+    }
+  },
+  "fbx_roundtrip": {
+    "blender": "5.1.2",
+    "location": [0.0, 0.0, 0.0],
+    "dimensions_m": [2.989142417907715, 2.989142417907715, 2.989142417907715],
+    "vertices": 328572,
+    "polygons": 656980,
+    "smooth_polygons": 656980
+  },
+  "sha256": {
+    "obj": "decab021c79adc1154a04bfd4374cebaa4b1bee273492c13aaf2e75bef7059e7",
+    "fbx": "00336c0de42a5a0966155051f8d85dcd004e32fa32a53eb1bab53a3b82ffa187",
+    "blend": "d87c4d49a1b5b0bbea45dfd8a1fbb75731ab04c48cd159bed3e7781bf860630a"
+  },
+  "reproduction": "python3 -B generate_gyroid.py --resolution 192 --radius-cm 150 --periods-across 1.75 --shell-half-width 0.16 --extent-cm 154 --name gyroid_lattice_fine"
+}

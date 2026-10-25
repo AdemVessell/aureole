@@ -1,0 +1,40 @@
+# Generated geometry and local source intermediates.
+geometry/*.obj
+geometry/*.fbx
+geometry/*.blend
+geometry/*.hdr
+
+# Local proof outputs and media; sanitized summaries remain tracked.
+proof/BUILD.json
+proof/BUILD_ERROR.txt
+proof/RENDER_REQUEST.json
+proof/RENDER_RESULT.json
+proof/SEQUENCE_CHECK.json
+proof/ENGINE_LOG.txt
+renders/
+clean.mp4
+reveal.mp4
+VERIFICATION.json
+
+# Python and virtual environments.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Unreal-generated content/cache/output.
+Unreal/Lattice/Content/
+Unreal/Lattice/DerivedDataCache/
+Unreal/Lattice/Intermediate/
+Unreal/Lattice/Saved/
+
+# Local links and machine-specific metadata.
+*.lnk
+.DS_Store
+
+# Published reference films are deliberately included.
+!web/clean.mp4
+!web/reveal.mp4
+*.log
+proof/MATH_CHECK.json
+proof/POST_EXPORT_SHUTDOWN.json

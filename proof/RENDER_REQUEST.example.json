@@ -1,0 +1,13 @@
+{
+  "output_path": "renders/example",
+  "resolution": [1600, 900],
+  "frame_start": 0,
+  "frame_end": 120,
+  "frame_step": 1,
+  "spatial_samples": 1,
+  "temporal_samples": 16,
+  "engine_warmup": 48,
+  "render_warmup": 32,
+  "zero_pad": 4,
+  "override_existing": true
+}

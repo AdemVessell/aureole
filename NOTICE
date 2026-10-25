@@ -1,0 +1,14 @@
+AUREOLE is distributed here as a reproducibility package for an equation-
+defined procedural-CGI study. This package adds no blanket license or waiver
+for the source, Unreal Engine, Blender, Python packages, fonts, codecs,
+platforms, or media derived from it.
+
+The authoring scripts and equations remain subject to their applicable rights.
+Unreal Engine, Blender, NumPy, SciPy, scikit-image, Pillow, ffmpeg, fonts and
+other tools retain their own licenses and terms. Check the relevant upstream
+license before redistribution or commercial use.
+
+No third-party stock mesh, texture, photographic HDR, or blanket asset license
+is asserted by this package. The generated HDR is procedural. Source OBJ/FBX/HDR and Unreal Content are
+recreated by the scripts and are not tracked. The finished reference movies
+and poster are included in web/. Created by Adem Vessell / Arkhē with Codex.

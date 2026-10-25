@@ -1,0 +1,54 @@
+{
+  "artifact": "gyroid_lattice_fine",
+  "formula": "g(u,v,w)=sin(u)*cos(v)+sin(v)*cos(w)+sin(w)*cos(u)",
+  "scalar_field": "max(abs(g)-shell_half_width, sphere_radius_normalized-1)",
+  "inside_rule": "field <= 0",
+  "units": "cm",
+  "radius_cm": 150.0,
+  "diameter_cm_target": 300.0,
+  "periods_across_target": 1.75,
+  "frequency_radians_per_cm": 0.03665191429188092,
+  "shell_half_width_g_units": 0.16,
+  "grid_resolution": [
+    192,
+    192,
+    192
+  ],
+  "sampling_extent_cm": [
+    -154.0,
+    154.0
+  ],
+  "grid_spacing_cm": 1.6125640869140625,
+  "mesh": {
+    "vertices": 328572,
+    "triangles": 656980,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "degenerate_triangles": 0,
+    "bounds_cm": [
+      [
+        -149.45726013183594,
+        149.45700073242188
+      ],
+      [
+        -149.45726013183594,
+        149.45700073242188
+      ],
+      [
+        -149.45726013183594,
+        149.45700073242188
+      ]
+    ],
+    "diameter_bounds_cm": [
+      298.91424560546875,
+      298.91424560546875,
+      298.91424560546875
+    ]
+  },
+  "normal_policy": "area-weighted smooth vertex normals; triangle winding from marching_cubes",
+  "source": "generate_gyroid.py",
+  "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "numpy": "2.0.2",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "repro_command": "python3 -B generate_gyroid.py --resolution 192 --radius-cm 150.0 --periods-across 1.75 --shell-half-width 0.16 --extent-cm 154.0 --name gyroid_lattice_fine"
+}
